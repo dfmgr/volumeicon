@@ -1,24 +1,46 @@
 ## volumeicon  
   
-File Manager  
+A lightweight volume control applet with support for global keybindings  
   
-Automatic install/update:  
-  
-```
+Automatic install/update:
+
+```shell
 bash -c "$(curl -LSs https://github.com/dfmgr/volumeicon/raw/master/install.sh)"
 ```
+
+Manual install:
   
-Manual install:  
-requires:  
-```apt install volumeicon-alsa```  
-```yum install volumeicon```  
-```pacman -S volumeicon```  
-  
+requires:
+
+Debian based:
+
+```shell
+apt install volumeicon notify-send
+```  
+
+Fedora Based:
+
+```shell
+yum install volumeicon notify-send
+```  
+
+Arch Based:
+
+```shell
+pacman -S volumeicon notify-send
+```  
+
+MacOS:  
+
+```shell
+brew install
 ```
+  
+```shell
 mv -fv "$HOME/.config/volumeicon" "$HOME/.config/volumeicon.bak"
-git clone https://github.com/dfmgr/caja "$HOME/.config/volumeicon"
+git clone https://github.com/dfmgr/volumeicon "$HOME/.config/volumeicon"
 ```
   
 <p align=center>
-  <a href="http://nullwise.com/volumeicon.html" target="_blank">volumeicon site</a>
+  <a href="http://nullwise.com/volumeicon.html" target="_blank" rel="noopener noreferrer">volumeicon site</a>
 </p>  
