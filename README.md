@@ -5,7 +5,7 @@ A lightweight volume control applet with support for global keybindings
 Automatic install/update:
 
 ```shell
-bash -c "$(curl -LSs https://github.com/dfmgr/volumeicon/raw/master/install.sh)"
+bash -c "$(curl -LSs https://github.com/dfmgr/volumeicon/raw/main/install.sh)"
 ```
 
 Manual install:
