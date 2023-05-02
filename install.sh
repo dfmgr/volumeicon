@@ -176,7 +176,7 @@ PYTHON_PIP=""
 PHP_COMPOSER=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Run custom actions
-
+__app_is_running volumeicon && VOLUMEICON_IS_RUNNING="true"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Show a custom message after install
 __run_post_message() {
@@ -186,7 +186,7 @@ __run_post_message() {
 # Define pre-install scripts
 __run_pre_install() {
   local getRunStatus=0
-  __app_is_running volumeicon && __kill volumeicon
+  __kill volumeicon
   return $getRunStatus
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -200,7 +200,7 @@ __run_prepost_install() {
 # run after primary post install function
 __run_post_install() {
   local getRunStatus=0
-  __silent_start volumeicon
+  [ "$VOLUMEICON_IS_RUNNING" = "true" ] && __silent_start volumeicon
   return $getRunStatus
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
